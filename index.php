@@ -1,24 +1,32 @@
-<?php
-include("include/header.php");
-?>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>PHP-Hospital</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-info bg-info">
-        <h5 class="text-white">PHP-Hospital</h5>
+    <?php
+    include("/Facultate/Daw/php-hospital/include/header.php");
+    // include("./include/header.php");
+    ?>
 
-        <div class="mr-auto"></div>
+    <div style="margin-top: 50px;"></div>
 
-        <ul class="">
-            <li class="nav-item"><a href="" class="nav-link">Admin</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Doctor</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Patient</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col shadow">
+                <img class="user_type" src="/img/patient.png" alt="Patient">
+                <a href="#">
+                    <button class="btn btn-success">Create account</button>
+                </a>
+            </div>
+            <div class="col shadow">
+                <img class="user_type" src="/img/doctor.png" alt="Doctor">
+            </div>
+        </div>
+    </div>
+
+
     
 </body>
 </html>
