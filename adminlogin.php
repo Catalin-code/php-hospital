@@ -2,8 +2,8 @@
 
     session_start();
 
-    include("/Facultate/Daw/php-hospital/include/connection.php");
-    // include("./include/connection.php");
+    // include("/Facultate/Daw/php-hospital/include/connection.php");
+    include("./include/connection.php");
 
     if (isset($_POST['login'])) {
        $username = $_POST['username'];

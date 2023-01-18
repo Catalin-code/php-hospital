@@ -11,10 +11,10 @@
 </head>
 <body>
     <?php
-        include("/Facultate/Daw/php-hospital/include/header.php");
-        include("/Facultate/Daw/php-hospital/include/connection.php");
-        // include("../include/header.php");
-        // include("../include/connection.php");
+        // include("/Facultate/Daw/php-hospital/include/header.php");
+        // include("/Facultate/Daw/php-hospital/include/connection.php");
+        include("../include/header.php");
+        include("../include/connection.php");
     ?>
 
     <div class="container-fluid">

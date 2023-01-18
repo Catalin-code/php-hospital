@@ -6,8 +6,8 @@
 </head>
 <body>
     <?php
-    include("/Facultate/Daw/php-hospital/include/header.php");
-    // include("./include/header.php");
+    // include("/Facultate/Daw/php-hospital/include/header.php");
+    include("./include/header.php");
     ?>
 
     <div style="margin-top: 50px;"></div>
