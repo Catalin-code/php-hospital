@@ -9,8 +9,8 @@
 </head>
 <body>
     <?php 
-        include("/Facultate/Daw/php-hospital/include/header.php");
-        // include("../include/header.php");
+        // include("/Facultate/Daw/php-hospital/include/header.php");
+        include("../include/header.php");
     ?>
     <div class="container-fluid">
         <div class="col-md-12">
