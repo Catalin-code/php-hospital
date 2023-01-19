@@ -18,8 +18,8 @@
                 <div class="col-md-2">
                     <?php 
                         include("sidenav.php");
-                        include("/Facultate/Daw/php-hospital/include/connection.php");
-                        // include("../include/connection.php");
+                        // include("/Facultate/Daw/php-hospital/include/connection.php");
+                        include("../include/connection.php");
                     ?>
                 </div>
                 <div class="col-md-10">
