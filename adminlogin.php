@@ -1,7 +1,5 @@
 <?php
 
-    session_start();
-
     // include("/Facultate/Daw/php-hospital/include/connection.php");
     include("./include/connection.php");
 
