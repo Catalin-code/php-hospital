@@ -22,6 +22,9 @@
             </div>
             <div class="col shadow">
                 <img class="user_type" src="/img/doctor.png" alt="Doctor">
+                <a href="#">
+                    <button class="btn btn-success">Apply now</button>
+                </a>
             </div>
         </div>
     </div>
