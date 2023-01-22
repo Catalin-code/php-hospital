@@ -25,11 +25,17 @@
                     echo '
                     <li class="nav-item"><a href="profile.php" class="nav-link text-white">'.$user.'</a></li>
                     <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>';
-                } else {
+                } elseif (isset($_SESSION['patient'])) {
+                    $user = $_SESSION['patient'];
                     echo '
+                    <li class="nav-item"><a href="profile.php" class="nav-link text-white">'.$user.'</a></li>
+                    <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>';
+                }else {
+                    echo '
+                    <li class="nav-item"><a href="/index.php" class="nav-link text-white">Home</a></li>
                     <li class="nav-item"><a href="/adminlogin.php" class="nav-link text-white">Admin</a></li>
                     <li class="nav-item"><a href="/doctorlogin.php" class="nav-link text-white">Doctor</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>';
+                    <li class="nav-item"><a href="/patientlogin.php" class="nav-link text-white">Patient</a></li>';
                 }
             ?>
         </ul>
