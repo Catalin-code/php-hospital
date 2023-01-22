@@ -1,7 +1,5 @@
 <?php 
-
     session_start();
-
 ?>
 
 <html lang="en">
@@ -11,8 +9,6 @@
 </head>
 <body>
     <?php
-        // include("/Facultate/Daw/php-hospital/include/header.php");
-        // include("/Facultate/Daw/php-hospital/include/connection.php");
         include("../include/header.php");
         include("../include/connection.php");
     ?>
@@ -36,7 +32,6 @@
                                                 $ad = mysqli_query($connect, "SELECT * FROM admin");
                                                 $num = mysqli_num_rows($ad);
                                             ?>
-
                                             <h5 class="my-2 text-white"><?php echo $num;?></h5>
                                             <h5 class="text-white">Total</h5>
                                             <h5 class="text-white">Administrators</h5>
@@ -51,12 +46,16 @@
                                 <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <h5 class="my-2 text-white">0</h5>
+                                                <?php 
+                                                    $dr = mysqli_query($connect, "SELECT * FROM doctor");
+                                                    $num = mysqli_num_rows($dr);
+                                                ?>
+                                                <h5 class="my-2 text-white"><?php echo $num;?></h5>
                                                 <h5 class="text-white">Total</h5>
                                                 <h5 class="text-white">Doctors</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <a href="#"><i class="fa-solid fa-user-doctor fa-3x my-5" style="color: white;"></i></a>
+                                                <a href="./doctor.php"><i class="fa-solid fa-user-doctor fa-3x my-5" style="color: white;"></i></a>
                                             </div>
                                         </div>
                                 </div>

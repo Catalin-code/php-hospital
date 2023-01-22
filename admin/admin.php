@@ -9,7 +9,6 @@
 </head>
 <body>
     <?php 
-        // include("/Facultate/Daw/php-hospital/include/header.php");
         include("../include/header.php");
     ?>
     <div class="container-fluid">
@@ -18,7 +17,6 @@
                 <div class="col-md-2">
                     <?php 
                         include("sidenav.php");
-                        // include("/Facultate/Daw/php-hospital/include/connection.php");
                         include("../include/connection.php");
                     ?>
                 </div>

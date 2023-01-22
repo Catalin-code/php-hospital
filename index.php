@@ -1,3 +1,6 @@
+<?php 
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +9,6 @@
 </head>
 <body>
     <?php
-    // include("/Facultate/Daw/php-hospital/include/header.php");
     include("./include/header.php");
     ?>
 
@@ -22,7 +24,7 @@
             </div>
             <div class="col shadow">
                 <img class="user_type" src="/img/doctor.png" alt="Doctor">
-                <a href="#">
+                <a href="/apply.php">
                     <button class="btn btn-success">Apply now</button>
                 </a>
             </div>

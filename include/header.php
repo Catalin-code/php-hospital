@@ -18,12 +18,17 @@
                 if (isset($_SESSION['admin'])) {
                     $user = $_SESSION['admin'];
                     echo '
-                    <li class="nav-item"><a href="#" class="nav-link text-white">'.$user.'</a></li>
+                    <li class="nav-item"><a href="profile.php" class="nav-link text-white">'.$user.'</a></li>
+                    <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>';
+                } elseif (isset($_SESSION['doctor'])) {
+                    $user = $_SESSION['doctor'];
+                    echo '
+                    <li class="nav-item"><a href="profile.php" class="nav-link text-white">'.$user.'</a></li>
                     <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>';
                 } else {
                     echo '
                     <li class="nav-item"><a href="/adminlogin.php" class="nav-link text-white">Admin</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white">Doctor</a></li>
+                    <li class="nav-item"><a href="/doctorlogin.php" class="nav-link text-white">Doctor</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>';
                 }
             ?>

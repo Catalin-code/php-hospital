@@ -9,22 +9,19 @@
        $error = array();
 
        if (empty($username)) {
-        $error['admin'] = 'Enter Username';
+        $error['doctor'] = 'Enter Username';
        } else if(empty($password)){
-        $error['admin'] = 'Enter Password';
+        $error['doctor'] = 'Enter Password';
        }
 
-       if (count($error)==0) {
-        $query = "SELECT * FROM Admin WHERE Username='$username' AND Password='$password'";
+       if (count($error) == 0) {
+        $query = "SELECT * FROM doctor WHERE Username='$username' AND Password='$password'";
         $result = mysqli_query($connect, $query);
-        $test = mysqli_num_rows($result);
 
         if (mysqli_num_rows($result) == 1) {
             echo "<script>alert('Successfull login')</script>";
-
-            $_SESSION['admin'] = $username;
-
-            header("Location:admin/index.php");
+            $_SESSION['doctor'] = $username;
+            header("Location:doctor/index.php");
             exit();
         } else {
             echo "<script>alert('Invalid Username or Password')</script>";
@@ -39,14 +36,14 @@
     <title>PHP-Hospital</title>
 </head>
 <body>
-    <?php
+    <?php 
         include("include/header.php");
     ?>
     <form method="post">
         <div>
             <?php
-                if (isset($error['admin'])) {
-                    $show = $error['admin'];
+                if (isset($error['doctor'])) {
+                    $show = $error['doctor'];
                     $show2 = "<h4 class='alert alert-danger'>$show</h4>";
                 } else {
                     $show2 = "";
@@ -62,7 +59,8 @@
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Password">
         </div>
-        <button type="submit" name="login" id="login" class="btn btn-success">Login</button>
+        <button type="submit" name="login" class="btn btn-success">Login</button>
+        <p>Don't have an account? <a href="apply.php">Apply now!</a></p>
     </form>
 </body>
 </html>

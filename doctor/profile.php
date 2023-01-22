@@ -16,18 +16,20 @@
             <div class="row">
                 <div class="col-md-2">
                     <?php 
-                        include("sidenav.php");
                         include("../include/connection.php");
 
-                        $ad = $_SESSION['admin'];
-                        $query = "SELECT * FROM admin WHERE username = '$ad'";
+                        $dr = $_SESSION['doctor'];
+                        $query = "SELECT * FROM doctor WHERE Username = '$dr'";
 
                         $res = mysqli_query($connect, $query);
 
                         while($row = mysqli_fetch_array($res)){
+                            $id = $row['Id'];
                             $username = $row['Username'];
                             $firstName = $row['FirstName'];
                             $lastName = $row['LastName'];
+                            $email = $row['Email'];
+                            $phoneNumber = $row['PhoneNumber'];
                         };
                     ?>
                 </div>
@@ -41,23 +43,23 @@
                                         $changeusername = $_POST['username'];
                                         if (empty($changeusername)) {
                                         } else {
-                                            $query = "UPDATE admin SET Username = '$changeusername'
-                                                    WHERE Username = '$ad'";
+                                            $query = "UPDATE doctor SET Username = '$changeusername'
+                                                    WHERE Username = '$dr'";
                                             $res = mysqli_query($connect, $query);
 
                                             if ($res) {
-                                                $_SESSION['admin'] = $changeusername;
+                                                $_SESSION['doctor'] = $changeusername;
                                                 echo "<meta http-equiv='refresh' content='0'>";
                                             }
-
                                         }
                                     }
+
                                     if (isset($_POST['changeFirstName'])) {
                                         $changefirstname = $_POST['firstName'];
                                         if (empty($changefirstname)) {
                                         } else {
-                                            $query = "UPDATE admin SET FirstName = '$changefirstname'
-                                                    WHERE username = '$ad'";
+                                            $query = "UPDATE doctor SET FirstName = '$changefirstname'
+                                                    WHERE Username = '$dr'";
                                             $res = mysqli_query($connect, $query);
                                             echo "<meta http-equiv='refresh' content='0'>";
                                         }
@@ -67,8 +69,30 @@
                                         $changelastname = $_POST['lastName'];
                                         if (empty($changelastname)) {
                                         } else {
-                                            $query = "UPDATE admin SET LastName = '$changelastname'
-                                                    WHERE username = '$ad'";
+                                            $query = "UPDATE doctor SET LastName = '$changelastname'
+                                                    WHERE Username = '$dr'";
+                                            $res = mysqli_query($connect, $query);
+                                            echo "<meta http-equiv='refresh' content='0'>";
+                                        }
+                                    }
+
+                                    if (isset($_POST['changeEmail'])) {
+                                        $changeemail = $_POST['email'];
+                                        if (empty($changeemail)) {
+                                        } else {
+                                            $query = "UPDATE doctor SET Email = '$changeemail'
+                                                    WHERE Username = '$dr'";
+                                            $res = mysqli_query($connect, $query);
+                                            echo "<meta http-equiv='refresh' content='0'>";
+                                        }
+                                    }
+
+                                    if (isset($_POST['changePhoneNumber'])) {
+                                        $changephonenumber = $_POST['phoneNumber'];
+                                        if (empty($changelastname)) {
+                                        } else {
+                                            $query = "UPDATE doctor SET PhoneNumber = '$changephonenumber'
+                                                    WHERE Username = '$dr'";
                                             $res = mysqli_query($connect, $query);
                                             echo "<meta http-equiv='refresh' content='0'>";
                                         }
@@ -89,6 +113,16 @@
                                     <input type="text" name="lastName" id="lastName" class="form-control" autocomplete="off">
                                     <br>
                                     <input type="submit" name="changeLastName" class="btn btn-success" value="Change">
+                                    <br>
+                                    <label for="">Change e-mail</label>
+                                    <input type="email" name="email" id="email" class="form-control" autocomplete="off">
+                                    <br>
+                                    <input type="submit" name="changeEmail" class="btn btn-success" value="Change">
+                                    <br>
+                                    <label for="">Change phone number</label>
+                                    <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" autocomplete="off">
+                                    <br>
+                                    <input type="submit" name="changePhoneNumber" class="btn btn-success" value="Change">
                                 </form>
                             </div>
                             <div class="col-md-6">
@@ -100,7 +134,7 @@
 
                                         $error = array();
 
-                                        $old = mysqli_query($connect, "SELECT * FROM admin WHERE Username = '$ad'");
+                                        $old = mysqli_query($connect, "SELECT * FROM doctor WHERE Username = '$dr'");
                                         $row = mysqli_fetch_array($old);
                                         $dboldpassword = $row['Password'];
 
@@ -117,8 +151,8 @@
                                         }
 
                                         if (count($error) == 0) {
-                                            $query = "UPDATE admin SET Password = '$newpassword'
-                                                    WHERE Username = '$ad'";
+                                            $query = "UPDATE doctor SET Password = '$newpassword'
+                                                    WHERE Username = '$dr'";
                                             mysqli_query($connect, $query);
                                         }
                                     }
