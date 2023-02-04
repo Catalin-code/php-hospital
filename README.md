@@ -8,10 +8,16 @@ Site link: https://php-hospital.herokuapp.com/
 - Home page
 - Admin dashboard
 - Admin profile
-- Patient dashboard - In progress
-- Patient profile - In progress
-- Doctor dashboard - In progress
-- Doctor profile - In progress
+- Patient dashboard
+- Patient profile
+- Doctor dashboard
+- Doctor profile
+- About page
+- Register page for patients
+- Apply page for doctors
+- Login functionality for admins, doctors and patients
+- Change account data functionality for admins, doctors and patients
+- Approve doctor applications by admins functionality
 
 ## Technologies
 
