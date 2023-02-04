@@ -18,24 +18,28 @@
                 if (isset($_SESSION['admin'])) {
                     $user = $_SESSION['admin'];
                     echo '
-                    <li class="nav-item"><a href="profile.php" class="nav-link text-white">'.$user.'</a></li>
-                    <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>';
+                    <li class="nav-item"><a href="../admin/profile.php" class="nav-link text-white">'.$user.'</a></li>
+                    <li class="nav-item"><a href="/about.php" class="nav-link text-white">About</a></li>
+                    <li class="nav-item"><a href="../admin/logout.php" class="nav-link text-white">Logout</a></li>';
                 } elseif (isset($_SESSION['doctor'])) {
                     $user = $_SESSION['doctor'];
                     echo '
-                    <li class="nav-item"><a href="profile.php" class="nav-link text-white">'.$user.'</a></li>
-                    <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>';
+                    <li class="nav-item"><a href="../doctor/profile.php" class="nav-link text-white">'.$user.'</a></li>
+                    <li class="nav-item"><a href="/about.php" class="nav-link text-white">About</a></li>
+                    <li class="nav-item"><a href="../doctor/logout.php" class="nav-link text-white">Logout</a></li>';
                 } elseif (isset($_SESSION['patient'])) {
                     $user = $_SESSION['patient'];
                     echo '
-                    <li class="nav-item"><a href="profile.php" class="nav-link text-white">'.$user.'</a></li>
-                    <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>';
+                    <li class="nav-item"><a href="../patient/profile.php" class="nav-link text-white">'.$user.'</a></li>
+                    <li class="nav-item"><a href="/about.php" class="nav-link text-white">About</a></li>
+                    <li class="nav-item"><a href="../patient/logout.php" class="nav-link text-white">Logout</a></li>';
                 }else {
                     echo '
                     <li class="nav-item"><a href="/index.php" class="nav-link text-white">Home</a></li>
                     <li class="nav-item"><a href="/adminlogin.php" class="nav-link text-white">Admin</a></li>
                     <li class="nav-item"><a href="/doctorlogin.php" class="nav-link text-white">Doctor</a></li>
-                    <li class="nav-item"><a href="/patientlogin.php" class="nav-link text-white">Patient</a></li>';
+                    <li class="nav-item"><a href="/patientlogin.php" class="nav-link text-white">Patient</a></li>
+                    <li class="nav-item"><a href="/about.php" class="nav-link text-white">About</a></li>';
                 }
             ?>
         </ul>

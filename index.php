@@ -18,7 +18,7 @@
         <div class="row align-items-start">
             <div class="col shadow">
                 <img class="user_type" src="/img/patient.png" alt="Patient">
-                <a href="#">
+                <a href="/signup.php">
                     <button class="btn btn-success">Create account</button>
                 </a>
             </div>

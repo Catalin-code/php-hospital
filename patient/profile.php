@@ -154,6 +154,7 @@
                                             $query = "UPDATE patient SET Password = '$newpassword'
                                                     WHERE Username = '$pa'";
                                             mysqli_query($connect, $query);
+                                            echo "<meta http-equiv='refresh' content='0'>";
                                         }
                                     }
                                     if (isset($error['p'])) {

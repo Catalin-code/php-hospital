@@ -120,6 +120,7 @@
                                             $query = "UPDATE admin SET Password = '$newpassword'
                                                     WHERE Username = '$ad'";
                                             mysqli_query($connect, $query);
+                                            echo "<meta http-equiv='refresh' content='0'>";
                                         }
                                     }
                                     if (isset($error['p'])) {
